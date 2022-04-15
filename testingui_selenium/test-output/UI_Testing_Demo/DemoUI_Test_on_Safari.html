@@ -1,0 +1,842 @@
+<html>
+<head>
+<title>TestNG:  DemoUI_Test_on_Safari</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>DemoUI_Test_on_Safari</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Feb 21 15:15:44 PST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>5 seconds (5672 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testCases.TC_VerifyTitle_001.setUp()'><b>setUp</b><br>Test class: com.testCases.TC_VerifyTitle_001<br>Parameters: safari</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1726771141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1726771141'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+</pre></div></td>
+<td>1</td>
+<td>com.testCases.TC_VerifyTitle_001@693fe6c9</td></tr>
+<tr>
+<td title='com.testCases.TC_VerifyTitle_healthstream_002.setUp()'><b>setUp</b><br>Test class: com.testCases.TC_VerifyTitle_healthstream_002<br>Parameters: safari</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1630522263", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1630522263'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+</pre></div></td>
+<td>0</td>
+<td>com.testCases.TC_VerifyTitle_healthstream_002@34f5090e</td></tr>
+<tr>
+<td title='com.testCases.TC_VerifyAboutUsPage_003.setUp()'><b>setUp</b><br>Test class: com.testCases.TC_VerifyAboutUsPage_003<br>Parameters: safari</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1114580331", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1114580331'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+</pre></div></td>
+<td>2</td>
+<td>com.testCases.TC_VerifyAboutUsPage_003@31e5415e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testCases.TC_VerifyTitle_001.tearDown()'><b>tearDown</b><br>Test class: com.testCases.TC_VerifyTitle_001</td>
+<td></td>
+<td>-1645485346</td>
+<td>com.testCases.TC_VerifyTitle_001@693fe6c9</td></tr>
+<tr>
+<td title='com.testCases.TC_VerifyTitle_healthstream_002.tearDown()'><b>tearDown</b><br>Test class: com.testCases.TC_VerifyTitle_healthstream_002</td>
+<td></td>
+<td>-1645485347</td>
+<td>com.testCases.TC_VerifyTitle_healthstream_002@34f5090e</td></tr>
+<tr>
+<td title='com.testCases.TC_VerifyAboutUsPage_003.tearDown()'><b>tearDown</b><br>Test class: com.testCases.TC_VerifyAboutUsPage_003</td>
+<td></td>
+<td>-1645485349</td>
+<td>com.testCases.TC_VerifyAboutUsPage_003@31e5415e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testCases.TC_VerifyAboutUsPage_003.AboutUsTitleTest()'><b>AboutUsTitleTest</b><br>Test class: com.testCases.TC_VerifyAboutUsPage_003</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace239301157", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace239301157'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+</pre></div></td>
+<td>0</td>
+<td>com.testCases.TC_VerifyAboutUsPage_003@31e5415e</td></tr>
+<tr>
+<td title='com.testCases.TC_VerifyTitle_001.GoogleTitleTest()'><b>GoogleTitleTest</b><br>Test class: com.testCases.TC_VerifyTitle_001</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1730064355", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1730064355'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+</pre></div></td>
+<td>0</td>
+<td>com.testCases.TC_VerifyTitle_001@693fe6c9</td></tr>
+<tr>
+<td title='com.testCases.TC_VerifyTitle_healthstream_002.HeatlhStreamTitleTest()'><b>HeatlhStreamTitleTest</b><br>Test class: com.testCases.TC_VerifyTitle_healthstream_002</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace241986698", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace241986698'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:230)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:151)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:87)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:69)
+	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:47)
+	at com.testCases.BaseClass.setUp(BaseClass.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: SafariDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:230)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:98)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	... 27 more
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:220)
+	... 29 more
+Caused by: org.openqa.selenium.WebDriverException: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;trantrang-macOS&apos;, ip: &apos;fe80:0:0:0:888:1c80:4248:8444%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:86)
+	at org.openqa.selenium.remote.service.DriverService.lambda$start$1(DriverService.java:205)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Invalid argument
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:117)
+	at org.openqa.selenium.safari.SafariDriverService.waitUntilAvailable(SafariDriverService.java:84)
+	... 5 more
+Caused by: java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.openqa.selenium.net.PortProber.waitForPortUp(PortProber.java:112)
+	... 6 more
+</pre></div></td>
+<td>0</td>
+<td>com.testCases.TC_VerifyTitle_healthstream_002@34f5090e</td></tr>
+</table><p>
+</body>
+</html>

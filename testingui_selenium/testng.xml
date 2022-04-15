@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI_Testing_Demo" parallel = "tests" thread-count ="2">
+<listeners>
+<listener class-name = "com.testUtilities.ExtentReport"/>
+</listeners>
+
+
+<test name ="DemoUI_Test_on_firefox">
+  <parameter name = "browserName" value = "chrome"></parameter>
+
+    <classes>
+      <class name="com.testCases.TC_VerifyTitle_001"/>
+	  <class name="com.testCases.TC_VerifyTitle_healthstream_002"/>
+	  <class name="com.testCases.TC_VerifyAboutUsPage_003"/>
+    </classes>
+  </test>
+ 
+ 
+</suite> <!-- Suite -->
